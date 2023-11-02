@@ -49,7 +49,7 @@ Proszę o przyniesienie ze sobą komputera z dowolnym systemem operacyjnym. Pros
 
 ### Git:
 
-- Sklonuj repozytorium `git clone https://github.com/tklepacki/aa-days.git`
+- Sklonuj repozytorium `git clone https://github.com/tklepacki/conselenium-2023.git`
 - Wejdź do folderu z repozytorium i upewnij się, że projekt został pobrany
 
 ### IDE
