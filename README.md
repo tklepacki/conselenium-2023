@@ -23,21 +23,21 @@ Proszę o przyniesienie ze sobą komputera z dowolnym systemem operacyjnym. Pros
   lub Eclipse: https://www.eclipse.org/downloads/
 
 - Java JDK - wersja 21
-    - http://www.oracle.com/technetwork/java/javase/downloads/
+  - http://www.oracle.com/technetwork/java/javase/downloads/
 
 - GIT
-    - Windows: https://git-scm.com/download/win
-      **UWAGA: W trakcie instalacji w oknie "Adjusting your PATH environment" zaznaczcie opcje: "Use Git and optional Unix tools from the Windows Command Prompt (ostatni radio button)"**
-    - Linux: https://git-scm.com/download/linux
-    - Mac: https://git-scm.com/download/mac
+  - Windows: https://git-scm.com/download/win
+    **UWAGA: W trakcie instalacji w oknie "Adjusting your PATH environment" zaznaczcie opcje: "Use Git and optional Unix tools from the Windows Command Prompt (ostatni radio button)"**
+  - Linux: https://git-scm.com/download/linux
+  - Mac: https://git-scm.com/download/mac
 
 - Docker
-    - https://docs.docker.com/install/linux/docker-ce/ubuntu/
-    - https://docs.docker.com/docker-for-windows/install/
-    - https://docs.docker.com/docker-for-mac/install/
+  - https://docs.docker.com/install/linux/docker-ce/ubuntu/
+  - https://docs.docker.com/docker-for-windows/install/
+  - https://docs.docker.com/docker-for-mac/install/
 
 - Node.js
-    - https://nodejs.org/en
+  - https://nodejs.org/en
 
 ## Weryfikacja środowiska
 
