@@ -22,7 +22,7 @@ Proszę o przyniesienie ze sobą komputera z dowolnym systemem operacyjnym. Pros
 - Wybranego IDE - najlepiej IntelliJ IDEA https://www.jetbrains.com/idea/
   lub Eclipse: https://www.eclipse.org/downloads/
 
-- Java JDK - wersja 21
+- Java JDK - wersja 19
   - http://www.oracle.com/technetwork/java/javase/downloads/
 
 - GIT
