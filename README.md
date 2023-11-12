@@ -8,6 +8,8 @@ W celu weryfikacji środowiska na którym będziemy pracować w takcie warsztat�
 
 - Notatki: https://docs.google.com/document/d/1nD0LaXUQAcfXc-sxXYAF36NUdBITMNhJqeBmf4KgAPg/edit?usp=sharing
 
+- Zadania: https://drive.google.com/drive/folders/1KRmAKd1OCbN4wbFIDcnzkXbpRStYiEVg?usp=sharing
+
 - Ankieta po warsztatach: https://forms.gle/3jV4cMqjC4AetbMz6
 
 ## Wymagania
