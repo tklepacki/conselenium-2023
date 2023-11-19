@@ -11,6 +11,8 @@ W celu weryfikacji środowiska na którym będziemy pracować w takcie warsztat�
 - Zadania: https://drive.google.com/drive/folders/1KRmAKd1OCbN4wbFIDcnzkXbpRStYiEVg?usp=sharing
 
 - Ankieta po warsztatach: https://forms.gle/3jV4cMqjC4AetbMz6
+  
+- Prezentacja: https://drive.google.com/file/d/1a5lt9EKGSFjAUeumNHD0dMldYQwtZX2s/view?usp=drive_link
 
 ## Wymagania
 
