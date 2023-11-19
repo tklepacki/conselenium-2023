@@ -1,4 +1,4 @@
-package part11.users;
+package users;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;

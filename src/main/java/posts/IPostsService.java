@@ -1,4 +1,4 @@
-package part11.posts;
+package posts;
 
 import io.restassured.response.Response;
 

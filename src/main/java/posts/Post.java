@@ -1,5 +1,4 @@
-package part12.posts;
-
+package posts;
 public class Post {
     public String getTitle() {
         return title;

@@ -1,4 +1,4 @@
-package part10.users;
+package users;
 
 import io.restassured.response.Response;
 

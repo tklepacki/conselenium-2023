@@ -1,4 +1,4 @@
-package part10.posts;
+package posts;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -62,5 +62,3 @@ public class PostsService implements IPostsService {
     }
 
 }
-
-
