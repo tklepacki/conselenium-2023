@@ -14,7 +14,7 @@ W celu weryfikacji środowiska na którym będziemy pracować w takcie warsztat�
   
 - Prezentacja: https://drive.google.com/file/d/1a5lt9EKGSFjAUeumNHD0dMldYQwtZX2s/view?usp=drive_link
 
-- Finalna wersja: https://github.com/tklepacki/conselenium-2023/tree/feature/all-parts 
+- Finalna wersja kodu źródłowego: https://github.com/tklepacki/conselenium-2023/tree/feature/all-parts 
 
 ## Wymagania
 
