@@ -36,3 +36,17 @@ jobs:
       - name: Run tests
         run: ./mvnw test -B
 
+      - name: Generate Surefire HTML Report
+        run: ./mvnw surefire-report:report-only
+
+      - name: Upload HTML Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-html-report
+          path: target/site/surefire-report.html
+
+      - name: Upload XML Test Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-xml-report
+          path: target/surefire-reports/
