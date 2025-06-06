@@ -39,14 +39,37 @@ jobs:
       - name: Generate Surefire HTML Report
         run: ./mvnw surefire-report:report-only
 
-      - name: Upload HTML Test Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: surefire-html-report
-          path: target/site/surefire-report.html
-
       - name: Upload XML Test Results
         uses: actions/upload-artifact@v4
         with:
           name: surefire-xml-report
           path: target/surefire-reports/
+
+      - name: Publish JUnit XML Test Results in GitHub UI
+        if: always()
+        uses: dorny/test-reporter@v2.1.0
+        with:
+          name: API Integration Test Report
+          path: target/surefire-reports/*.xml
+          reporter: java-junit
+          fail-on-error: false
+          only-summary: false
+
+      - name: Download Allure CLI
+        if: always()
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/download/2.34.0/allure-2.34.0.zip -O allure.zip
+          unzip -q allure.zip -d allure-cli
+          chmod +x allure-cli/allure-2.34.0/bin/allure
+
+      - name: Generate Allure HTML Report
+        if: always()
+        run: |
+          ./allure-cli/allure-2.34.0/bin/allure generate target/allure-results --clean -o target/allure-report
+
+      - name: Upload Allure HTML Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: target/allure-report
