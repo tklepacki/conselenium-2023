@@ -18,6 +18,7 @@ public class UserTest {
     public static void createRequestSpecification() {
         requestSpec = new RequestSpecBuilder().
                 setBaseUri("https://reqres.in/api/users").
+                addHeader("x-api-key", "reqres-free-v1").
                 build();
     }
 
@@ -86,7 +87,7 @@ public class UserTest {
     @Test
     public void getStarWarsPeopleList() {
         when().
-                get("https://swapi.dev/api/people").
+                get("https://swapi.py4e.com/api/people").
 
                 then().
                 body("results.findAll { it.height > '180' }.name", hasItems("R2-D2", "Darth Vader", "R5-D4", "Biggs Darklighter", "Obi-Wan Kenobi")).

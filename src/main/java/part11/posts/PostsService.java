@@ -16,7 +16,7 @@ public class PostsService implements IPostsService {
             setContentType(ContentType.JSON).
             build();
 
-    public Response getPost(Integer postId) {
+    public Response getPost(String postId) {
         Response response = given().
                 spec(requestSpec).
                 pathParam("postId", postId).
@@ -42,7 +42,7 @@ public class PostsService implements IPostsService {
         return response;
     }
 
-    public Response editPost(Integer postId, Post post) {
+    public Response editPost(String postId, Post post) {
         Response response = given().
                 spec(requestSpec).
                 pathParam("postId", postId).
@@ -52,7 +52,7 @@ public class PostsService implements IPostsService {
         return response;
     }
 
-    public Response deletePost(Integer postId) {
+    public Response deletePost(String postId) {
         Response response = given().
                 spec(requestSpec).
                 pathParam("postId", postId).

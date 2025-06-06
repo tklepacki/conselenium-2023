@@ -1,5 +1,8 @@
 package part12.posts;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Post {
     public String getTitle() {
         return title;
@@ -10,26 +13,26 @@ public class Post {
         return this;
     }
 
-    public String getAuthor() {
-        return author;
+    public int getViews() {
+        return views;
     }
 
-    public Post setAuthor(String author) {
-        this.author = author;
+    public Post setViews(int views) {
+        this.views = views;
         return this;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public Post setId(int id) {
+    public Post setId(String id) {
         this.id = id;
         return this;
     }
 
     private String title;
-    private String author;
-    private int id;
+    private int views;
+    private String id;
 
 }

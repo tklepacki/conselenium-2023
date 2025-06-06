@@ -4,14 +4,14 @@ import io.restassured.response.Response;
 
 public interface IPostsService {
 
-    Response getPost(Integer postId);
+    Response getPost(String postId);
 
     Response getPostList();
 
     Response addPost(Post post);
 
-    Response editPost(Integer postId, Post post);
+    Response editPost(String postId, Post post);
 
-    Response deletePost(Integer postId);
+    Response deletePost(String postId);
 
 }

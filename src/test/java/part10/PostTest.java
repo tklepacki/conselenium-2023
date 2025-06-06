@@ -12,11 +12,11 @@ public class PostTest {
 
         Post post = new Post();
         post.setTitle("TestTitle");
-        post.setAuthor("TestAuthor");
+        post.setViews(200);
 
-        Integer addedPostId = RestService.getPostsService().addPost(post).
+        String addedPostId = RestService.getPostsService().addPost(post).
                 then().
-                body("author", equalTo(post.getAuthor())).
+                body("views", equalTo(post.getViews())).
                 body("title", equalTo(post.getTitle())).
                 statusCode(201).
                 extract().
@@ -25,7 +25,7 @@ public class PostTest {
         RestService.getPostsService().getPost(addedPostId).
                 then().
                 body("id", equalTo(addedPostId)).
-                body("author", equalTo(post.getAuthor())).
+                body("views", equalTo(post.getViews())).
                 body("title", equalTo(post.getTitle())).
                 statusCode(200);
     }
@@ -35,22 +35,22 @@ public class PostTest {
 
         Post post = new Post();
         post.setTitle("TestTitle");
-        post.setAuthor("TestAuthor");
+        post.setViews(200);
 
-        Integer addedPostId = RestService.getPostsService().addPost(post).
+        String addedPostId = RestService.getPostsService().addPost(post).
                 then().
                 statusCode(201).
                 extract().
                 path("id");
 
         Post updatedPost = new Post();
-        post.setTitle("TestTitleUpdated");
-        post.setAuthor("TestAuthorUpdated");
+        updatedPost.setTitle("TestTitleUpdated");
+        updatedPost.setViews(300);
 
-        Integer updatedPostId = RestService.getPostsService().editPost(addedPostId, updatedPost).
+        String updatedPostId = RestService.getPostsService().editPost(addedPostId, updatedPost).
                 then().
                 body("id", equalTo(addedPostId)).
-                body("author", equalTo(updatedPost.getAuthor())).
+                body("views", equalTo(updatedPost.getViews())).
                 body("title", equalTo(updatedPost.getTitle())).
                 statusCode(200).
                 extract().
@@ -59,7 +59,7 @@ public class PostTest {
         RestService.getPostsService().getPost(updatedPostId).
                 then().
                 body("id", equalTo(addedPostId)).
-                body("author", equalTo(updatedPost.getAuthor())).
+                body("views", equalTo(updatedPost.getViews())).
                 body("title", equalTo(updatedPost.getTitle())).
                 statusCode(200);
     }
@@ -69,9 +69,9 @@ public class PostTest {
 
         Post post = new Post();
         post.setTitle("TestTitle");
-        post.setAuthor("TestAuthor");
+        post.setViews(200);
 
-        Integer addedPostId = RestService.getPostsService().addPost(post).
+        String addedPostId = RestService.getPostsService().addPost(post).
                 then().
                 statusCode(201).
                 extract().
@@ -79,9 +79,9 @@ public class PostTest {
 
         RestService.getPostsService().getPostList().
                 then().
-                body("find { it.id == " + addedPostId + " }.id", equalTo(addedPostId)).
-                body("find { it.id == " + addedPostId + " }.title", equalTo(post.getTitle())).
-                body("find { it.id == " + addedPostId + " }.author", equalTo(post.getAuthor())).
+                body("find { it.id == '" + addedPostId + "' }.id", equalTo(addedPostId)).
+                body("find { it.id == '" + addedPostId + "' }.title", equalTo(post.getTitle())).
+                body("find { it.id == '" + addedPostId + "' }.views", equalTo(post.getViews())).
                 statusCode(200);
     }
 
@@ -90,9 +90,9 @@ public class PostTest {
 
         Post post = new Post();
         post.setTitle("TestTitle");
-        post.setAuthor("TestAuthor");
+        post.setViews(200);
 
-        Integer addedPostId = RestService.getPostsService().addPost(post).
+        String addedPostId = RestService.getPostsService().addPost(post).
                 then().
                 statusCode(201).
                 extract().
