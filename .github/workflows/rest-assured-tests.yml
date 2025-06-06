@@ -22,14 +22,6 @@ jobs:
       - name: Make Maven Wrapper
         run: chmod +x ./mvnw
 
-      - name: Cache Maven dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
       - name: Build the project
         run: ./mvnw clean install -B
 
@@ -63,11 +55,7 @@ jobs:
       - name: Generate Allure HTML Report from Surefire XML
         if: always()
         run: |
-          ./allure-cli/allure-2.34.0/bin/allure generate \
-            --clean \
-            --plugins junit-xml-plugin \
-            target/surefire-reports \
-            -o target/allure-report
+          ./allure-cli/allure-2.34.0/bin/allure generate --clean --plugins junit-xml-plugin target/surefire-reports target/allure-report
 
       - name: Upload Allure HTML Report
         if: always()
