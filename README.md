@@ -4,18 +4,6 @@ Cieszę się, że wybrałeś właśnie mój warsztat :)
 
 W celu weryfikacji środowiska na którym będziemy pracować w takcie warsztatów poproszę Cię o upewnienie się, że spełniasz wymagania dotyczące narzędzi (*Wymagania*).
 
-## Przydatne Linki
-
-- Notatki: https://docs.google.com/document/d/1nD0LaXUQAcfXc-sxXYAF36NUdBITMNhJqeBmf4KgAPg/edit?usp=sharing
-
-- Zadania: https://drive.google.com/drive/folders/1KRmAKd1OCbN4wbFIDcnzkXbpRStYiEVg?usp=sharing
-
-- Ankieta po warsztatach: https://forms.gle/3jV4cMqjC4AetbMz6
-  
-- Prezentacja: https://drive.google.com/file/d/1a5lt9EKGSFjAUeumNHD0dMldYQwtZX2s/view?usp=drive_link
-
-- Finalna wersja kodu źródłowego: https://github.com/tklepacki/conselenium-2023/tree/feature/all-parts 
-
 ## Wymagania
 
 ### Wiedza
@@ -34,7 +22,7 @@ Proszę o przyniesienie ze sobą komputera z dowolnym systemem operacyjnym. Pros
 - Wybranego IDE - najlepiej IntelliJ IDEA https://www.jetbrains.com/idea/
   lub Eclipse: https://www.eclipse.org/downloads/
 
-- Java JDK - wersja 19
+- Java JDK - wersja 21
   - http://www.oracle.com/technetwork/java/javase/downloads/
 
 - GIT
