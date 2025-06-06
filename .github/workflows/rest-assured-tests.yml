@@ -34,5 +34,5 @@ jobs:
         run: ./mvnw clean install -B
 
       - name: Run tests
-        run: ./mvnw test -B -Dtest=part01.UserTest
+        run: ./mvnw test -B
 
