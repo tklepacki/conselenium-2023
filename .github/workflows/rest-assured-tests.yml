@@ -36,20 +36,18 @@ jobs:
       - name: Run tests
         run: ./mvnw test -B
 
-      - name: Generate Surefire HTML Report
-        run: ./mvnw surefire-report:report-only
-
-      - name: Upload XML Test Results
+      - name: Upload Surefire XML Reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: surefire-xml-report
           path: target/surefire-reports/
 
-      - name: Publish JUnit XML Test Results in GitHub UI
+      - name: Publish JUnit Test Results in GitHub UI
         if: always()
         uses: dorny/test-reporter@v2.1.0
         with:
-          name: API Integration Test Report
+          name: JUnit Test Results
           path: target/surefire-reports/*.xml
           reporter: java-junit
           fail-on-error: false
@@ -62,10 +60,14 @@ jobs:
           unzip -q allure.zip -d allure-cli
           chmod +x allure-cli/allure-2.34.0/bin/allure
 
-      - name: Generate Allure HTML Report
+      - name: Generate Allure HTML Report from Surefire XML
         if: always()
         run: |
-          ./allure-cli/allure-2.34.0/bin/allure generate target/allure-results --clean -o target/allure-report
+          ./allure-cli/allure-2.34.0/bin/allure generate \
+            --clean \
+            --plugins junit-xml-plugin \
+            target/surefire-reports \
+            -o target/allure-report
 
       - name: Upload Allure HTML Report
         if: always()
